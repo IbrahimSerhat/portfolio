@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-1..5.each do |i|
+(1..5).each do |i|
   Blog.create(title: "Example Blog Title #{i}",
               body: "Example body lorem ipsum #{i}")
 end
 
-1..5.each do |i|
+(1..5).each do |i|
   Portfolio.create(title: "Example Portfolio Title #{i}",
                    subtitle: "Example subtitle #{i}",
                    body: "Example body lorem ipsum #{i}",
