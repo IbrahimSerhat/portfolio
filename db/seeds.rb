@@ -15,8 +15,8 @@ end
   Portfolio.create(title: "Example Portfolio Title #{i}",
                    subtitle: "Example subtitle #{i}",
                    body: "Example body lorem ipsum #{i}",
-                   main_image: '',
-                   thumb_image: '')
+                   main_image: 'http://placehold.it/600x400',
+                   thumb_image: 'http://placehold.it/350x200')
 end
 
 
