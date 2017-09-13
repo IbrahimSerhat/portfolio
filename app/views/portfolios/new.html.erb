@@ -3,7 +3,12 @@
 <%= form_with(model: @portfolio, local: true) do |form| %>
     <div class="field">
       <%= form.label :title %>
-      <%= form.text_field :title, id: :blog_title %>
+      <%= form.text_field :title, id: :portfolio_title %>
+    </div>
+
+    <div class="field">
+      <%= form.label :subtitle %>
+      <%= form.text_field :subtitle, id: :portfolio_subtitle %>
     </div>
 
     <div class="field">
