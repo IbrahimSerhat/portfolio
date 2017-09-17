@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170914104238) do
+ActiveRecord::Schema.define(version: 20170917092438) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
@@ -51,6 +51,15 @@ ActiveRecord::Schema.define(version: 20170914104238) do
     t.integer "percent_utilized"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "badge"
+  end
+
+  create_table "technologies", force: :cascade do |t|
+    t.string "name"
+    t.integer "portfolio_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["portfolio_id"], name: "index_technologies_on_portfolio_id"
   end
 
   create_table "topics", force: :cascade do |t|
