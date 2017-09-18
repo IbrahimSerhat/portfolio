@@ -19,5 +19,7 @@
   <% end %>
 
   <%= yield %>
+
+  <%= "<hr><p>Thanks for visiting me from <strong>#{session[:source]}</strong></p>".html_safe if session[:source] %>
   </body>
 </html>
