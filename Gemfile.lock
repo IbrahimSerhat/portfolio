@@ -97,6 +97,8 @@ GEM
     nokogiri (1.8.0-x64-mingw32)
       mini_portile2 (~> 2.2.0)
     orm_adapter (0.5.0)
+    petergate (1.7.5)
+      activerecord (> 4.0.0)
     pg (0.21.0)
     pg (0.21.0-x64-mingw32)
     popper_js (1.11.1)
@@ -187,13 +189,14 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  bootstrap (~> 4.0.0.alpha6)
+  bootstrap (~> 4.0.0.beta)
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.3)
   friendly_id (~> 5.2, >= 5.2.1)
   jbuilder (~> 2.5)
   jquery-rails
+  petergate (~> 1.7, >= 1.7.5)
   pg (~> 0.18)
   puma (~> 3.7)
   rails (~> 5.1.4)
@@ -206,4 +209,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.15.4
+   1.16.0.pre.2
