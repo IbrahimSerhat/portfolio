@@ -13,7 +13,9 @@
   </thead>
 
   <tbody>
-    <%= render @blogs %>
+    <% cache do %>
+      <%= render @blogs %>
+    <% end %>
   </tbody>
 </table>
 
