@@ -10,16 +10,24 @@
   </head>
 
   <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
 
-  <%= render 'shared/nav' %>
+        <%= render 'shared/application_nav' %>
 
-  <%= login_helper %>
-  <%= yield %>
+        <%= login_helper %>
 
-  <%= source_helper('application') %>
-  <%= @copyright %>
+        <%= yield %>
+
+        <%= @copyright %>
+
+        <%= source_helper('application') %>
+
+        </div>
+      </div>
+    </div>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </body>
