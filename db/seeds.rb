@@ -1,3 +1,6 @@
+demoadmin = User.create(name: 'Demo Admin', email: 'admin@ibrahimserhat.com', roles: 'admin', password: 'adminpass')
+demouser = User.create(name: 'Demo User', email: 'user@ibrahimserhat.com', roles: 'user', password: 'userpass')
+
 3.times do |topic|
   Topic.create!(
            title: "Topic #{topic}"
@@ -35,3 +38,6 @@ Skill.create([
                  { title: 'HTML', percent_utilized: 90 },
                  { title: 'Angular', percent_utilized: 10 }
              ])
+
+puts "demo admin login => email: #{demoadmin.email}, password: #{demoadmin.password}"
+puts "demo user login => email: #{demouser.email}, password: #{demouser.password}"
