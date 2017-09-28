@@ -1,9 +1,14 @@
-<tr>
-  <td><%= blog.title.upcase %></td>
-  <td><%= distance_of_time_in_words(blog.created_at, Time.now) %></td>
-  <td><%= blog.body %></td>
-  <td><%= link_to blog.status, toggle_status_blog_path(blog) if logged_in?(:admin) %></td>
-  <td><%= link_to 'Show', blog %></td>
-  <td><%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:admin) %></td>
-  <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:admin) %></td>
-</tr>
+<div class="blog-post">
+  <h2 class="blog-post-title"><%= link_to blog.title.upcase, blog %></h2>
+  <p class="blog-post-meta"><%= distance_of_time_in_words(blog.created_at, Time.now) %> by <%= link_to blog.user.name, '#' %></p>
+
+    <%= blog.body %>
+
+    <% if logged_in?(:admin) %>
+    <p class="blog-post-meta">
+      <%= link_to blog.status.capitalize, toggle_status_blog_path(blog) %> /
+      <%= link_to 'Edit', edit_blog_path(blog) %> /
+      <%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+<% end %>
+</div>

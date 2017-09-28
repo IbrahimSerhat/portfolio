@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170919095320) do
+ActiveRecord::Schema.define(version: 20170928095924) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 20170919095320) do
     t.string "slug"
     t.integer "status", default: 0
     t.integer "topic_id"
+    t.integer "user_id"
     t.index ["slug"], name: "index_blogs_on_slug", unique: true
     t.index ["topic_id"], name: "index_blogs_on_topic_id"
+    t.index ["user_id"], name: "index_blogs_on_user_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

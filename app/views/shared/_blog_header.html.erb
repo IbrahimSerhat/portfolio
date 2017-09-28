@@ -1,0 +1,7 @@
+<div class="blog-header">
+  <div class="container">
+    <h1 class="blog-title"><%= @blog_title %></h1>
+    <p class="lead blog-description"><%= @blog_description %></p>
+    <%= link_to 'New Article', new_blog_path if logged_in?(:admin) %>
+  </div>
+</div>

@@ -10,7 +10,7 @@ end
 (1..10).each do |i|
   Blog.create(title: "Example Blog Title #{i}",
               body: "Example body lorem ipsum #{i}",
-              topic_id: Random.rand(1..3)
+              topic_id: Random.rand(1..3), user_id: User.first.id
   )
 end
 
