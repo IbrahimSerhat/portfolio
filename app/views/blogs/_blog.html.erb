@@ -1,6 +1,6 @@
 <div class="blog-post">
   <h2 class="blog-post-title"><%= link_to blog.title.upcase, blog %></h2>
-  <p class="blog-post-meta"><%= distance_of_time_in_words(blog.created_at, Time.now) %> by <%= link_to blog.user.name, '#' %></p>
+  <p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> by <%= link_to blog.user.name, '#' %></p>
 
     <%= blog.body %>
 
