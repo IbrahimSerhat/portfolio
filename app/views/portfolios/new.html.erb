@@ -1,31 +1,5 @@
-<h1>Create a New Portfolio Item</h1>
+<div class="container portfolio-form">
+  <h1>Create a New Portfolio Item</h1>
 
-<%= form_with(model: @portfolio, local: true) do |form| %>
-    <div class="field">
-      <%= form.label :title %>
-      <%= form.text_field :title, id: :portfolio_title %>
-    </div>
-
-    <div class="field">
-      <%= form.label :subtitle %>
-      <%= form.text_field :subtitle, id: :portfolio_subtitle %>
-    </div>
-
-    <div class="field">
-      <%= form.label :body %>
-      <%= form.text_area :body, id: :blog_body %>
-    </div>
-
-    <ul>
-      <%= form.fields_for :technologies do |t_form| %>
-      <li>
-        <%= t_form.label :name %>
-        <%= t_form.text_field :name %>
-      </li>
-      <% end %>
-    </ul>
-
-    <div class="actions">
-      <%= form.submit %>
-    </div>
-<% end %>
+  <%= render 'form', portfolio_item: @portfolio_item %>
+</div>
