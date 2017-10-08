@@ -1,10 +1,18 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: [:edit, :update, :show, :destroy]
   layout 'portfolio'
-  access user: [:index, :show], admin: :all
+  access user: [:index, :show, :sort], admin: :all
 
   def index
     @portfolio_items = Portfolio.by_position
+  end
+
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+
+    render nothing: true
   end
 
   def new

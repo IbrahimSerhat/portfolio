@@ -91,6 +91,7 @@ GEM
       activerecord (>= 4.0.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    hirb (0.7.3)
     i18n (0.8.6)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -216,6 +217,7 @@ DEPENDENCIES
   devise (~> 4.3)
   font-awesome-rails
   friendly_id (~> 5.2, >= 5.2.1)
+  hirb
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails (~> 5.0, >= 5.0.5)
