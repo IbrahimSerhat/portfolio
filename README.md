@@ -4,7 +4,7 @@
 
 ### Requirments
 
-+ Ruby 2.4.0+ (prefer 2.4.1)
++ Ruby 2.4.0+ (prefer 2.4.2)
 + Rails 5.1+ (prefer 5.1.4)
 
 ### Features
