@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= @page_title %></title>
-    <%= csrf_meta_tags %>
-    <meta name="keywords" content="<%= @seo_keywords %>" />
-    <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title><%= @page_title %></title>
+  <%= csrf_meta_tags %>
+  <meta name="keywords" content="<%= @seo_keywords %>" />
+  <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-  <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+</head>
 
-  <%= render 'shared/nav' %>
+<body>
+  <%= render 'shared/portfolio_nav' %>
 
-  <%= login_helper %>
+  <%= render 'shared/portfolio_masthead' %>
 
-  <%= yield %>
+    <%= yield %>
 
-  <%= source_helper('portfolio') %>
-  <%= @copyright %>
-  </body>
+<%= render 'shared/portfolio_footer' %>
+
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</body>
 </html>
