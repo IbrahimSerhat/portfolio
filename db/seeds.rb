@@ -14,23 +14,23 @@ end
   )
 end
 
-(1..5).each do |i|
-  Portfolio.create(title: "Example Portfolio Title #{i}",
-                   subtitle: 'Ruby on Rails',
-                   body: "Example body lorem ipsum #{i}",
-                   main_image: 'http://placehold.it/600x400',
-                   thumb_image: 'http://placehold.it/350x200')
-  Portfolio.last.technologies.create(name: 'Rails')
-end
+#(1..5).each do |i|
+#  Portfolio.create(title: "Example Portfolio Title #{i}",
+#                   subtitle: 'Ruby on Rails',
+#                   body: "Example body lorem ipsum #{i}",
+#                   main_image: 'uploads/main_image/600x400.png',
+#                   thumb_image: 'uploads/thumb_image/350x200.png')
+#  Portfolio.last.technologies.create(name: 'Rails')
+#end
 
-(1..2).each do |i|
-  Portfolio.create(title: "Example Portfolio Title #{i+5}",
-                   subtitle: 'Angular',
-                   body: "Example body lorem ipsum #{i+5}",
-                   main_image: 'http://placehold.it/600x400',
-                   thumb_image: 'http://placehold.it/350x200')
-  Portfolio.last.technologies.create(name: 'Angular')
-end
+#(1..2).each do |i|
+#  Portfolio.create(title: "Example Portfolio Title #{i+5}",
+#                   subtitle: 'Angular',
+#                   body: "Example body lorem ipsum #{i+5}",
+#                   main_image: 'http://placehold.it/600x400',
+#                   thumb_image: 'http://placehold.it/350x200')
+#  Portfolio.last.technologies.create(name: 'Angular')
+#end
 
 
 Skill.create([

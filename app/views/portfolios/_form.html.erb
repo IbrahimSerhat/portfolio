@@ -10,12 +10,18 @@
         <%= form.label :subtitle %>
         <%= form.text_field :subtitle, id: :portfolio_subtitle, class: 'form-control' %>
       </div>
+
+      <div class="form-group">
+        <%= form.file_field :image %>
+      </div>
+
+
     </div>
 
     <div class="col-md-6">
       <div class="form-group">
         <%= form.label :body %>
-        <%= form.text_area :body, id: :blog_body, class: 'form-control', rows: 13 %>
+        <%= form.text_area :body, id: :blog_body, class: 'form-control', rows: 9 %>
       </div>
     </div>
 
