@@ -2,7 +2,7 @@
 
 class PortfolioUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
-  storage :sftp
+  storage :ftp
 
   process resize_to_fit: [600, 400]
 

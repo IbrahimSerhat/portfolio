@@ -25,7 +25,6 @@ class PortfoliosController < ApplicationController
     if @portfolio.save
       redirect_to portfolios_path, notice: 'Portfolio was successfully created.'
     else
-      byebug
       render :new
     end
   end
