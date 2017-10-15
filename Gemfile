@@ -64,5 +64,5 @@ gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 gem 'hirb'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'carrierwave-dropbox'
+gem 'carrierwave-ftp', '~> 0.3.1', :require => 'carrierwave/storage/ftp/all' # both FTP/SFTP
 gem 'dotenv-rails'
