@@ -1,5 +1,14 @@
 <div class="album text-muted">
   <div class="container">
+    <% if logged_in?(:admin) %>
+    <div class="row mb-3">
+      <div class="col-md-10">
+      </div>
+      <div class="col-md-2 mr-md-0 text-right">
+        <%= link_to 'New Item', new_portfolio_path %>
+      </div>
+    </div>
+    <% end %>
     <div class="row <%= 'sortable' if logged_in?(:admin) %>">
       <%= render partial: 'portfolio_item', collection: @portfolio_items %>
     </div>
