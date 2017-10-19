@@ -26,14 +26,14 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', platforms: :ruby
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 end
@@ -49,20 +49,20 @@ group :production do
   gem 'rails_12factor'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Extra
-gem 'bcrypt', platforms: :ruby
-gem 'friendly_id', '~> 5.2', '>= 5.2.1'
-gem 'devise', '~> 4.3'
-gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0.beta'
-gem 'petergate', '~> 1.7', '>= 1.7.5'
-gem 'font-awesome-rails'
-gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'
-gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
-gem 'hirb'
 gem 'carrierwave'
-gem 'mini_magick'
-gem 'carrierwave-ftp', '~> 0.3.1', :require => 'carrierwave/storage/ftp/all' # both FTP/SFTP
+gem 'carrierwave-ftp', '~> 0.3.1', require: 'carrierwave/storage/ftp/all'
+gem 'cocoon', '~> 1.2', '>= 1.2.10'
+gem 'devise', '~> 4.3'
 gem 'dotenv-rails'
+gem 'font-awesome-rails'
+gem 'friendly_id', '~> 5.2', '>= 5.2.1'
+gem 'hirb'
+gem 'jquery-rails'
+gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
+gem 'kaminari', git: 'https://github.com/kaminari/kaminari'
+gem 'mini_magick'
+gem 'petergate', '~> 1.7', '>= 1.7.5'

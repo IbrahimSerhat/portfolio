@@ -76,6 +76,7 @@ GEM
     carrierwave-ftp (0.3.1)
       carrierwave (>= 0.6.2)
       net-sftp (~> 2.1.2)
+    cocoon (1.2.10)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -237,6 +238,7 @@ DEPENDENCIES
   byebug
   carrierwave
   carrierwave-ftp (~> 0.3.1)
+  cocoon (~> 1.2, >= 1.2.10)
   coffee-rails (~> 4.2)
   devise (~> 4.3)
   dotenv-rails

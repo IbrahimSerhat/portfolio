@@ -17,7 +17,6 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio_item = Portfolio.new
-    3.times { @portfolio_item.technologies.build }
   end
 
   def create
@@ -35,7 +34,7 @@ class PortfoliosController < ApplicationController
   def update
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
-        format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully updated.' }
+        format.html { redirect_to @portfolio_item, notice: 'Portfolio was successfully updated.' }
       else
         format.html { render :edit }
       end
@@ -57,7 +56,7 @@ class PortfoliosController < ApplicationController
   def portfolio_params
     params.require(:portfolio).permit(:title, :subtitle,
                                       :body, :image,
-                                      technologies_attributes: [:name])
+                                      technologies_attributes: [:id, :name, :_destroy])
   end
 
   def set_portfolio
