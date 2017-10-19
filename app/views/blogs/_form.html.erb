@@ -1,7 +1,7 @@
 <%= form_with(model: blog, local: true) do |form| %>
   <% if blog.errors.any? %>
     <% blog.errors.full_messages.each do |error| %>
-      <%= js add_gritter(error, title: 'DD Serhat Portfolio', sticky: false) %>
+      <%= alert_generator(error) %>
     <% end %>
   <% end %>
 
