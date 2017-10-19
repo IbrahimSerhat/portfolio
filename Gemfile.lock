@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/kaminari/kaminari
-  revision: 23e4737720675c83e0c06dc269824cd972058419
+  revision: e32c61cf6edd538bb9bca20421ec9447ebcd7d25
   specs:
     kaminari (1.1.0)
       activesupport (>= 4.1.0)
@@ -67,12 +67,10 @@ GEM
       sass (>= 3.4.19)
     builder (3.2.3)
     byebug (9.1.0)
-    carrierwave (0.11.2)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-      json (>= 1.7)
+    carrierwave (1.2.1)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
       mime-types (>= 1.16)
-      mimemagic (>= 0.3.0)
     carrierwave-ftp (0.3.1)
       carrierwave (>= 0.6.2)
       net-sftp (~> 2.1.2)
@@ -106,8 +104,10 @@ GEM
       activerecord (>= 4.0.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    gritter (1.2.0)
     hirb (0.7.3)
-    i18n (0.8.6)
+    i18n (0.9.0)
+      concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -117,7 +117,6 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
-    json (2.1.0)
     loofah (2.1.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -127,7 +126,6 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mimemagic (0.3.2)
     mini_magick (4.8.0)
     mini_portile2 (2.3.0)
     minitest (5.10.3)
@@ -244,6 +242,7 @@ DEPENDENCIES
   dotenv-rails
   font-awesome-rails
   friendly_id (~> 5.2, >= 5.2.1)
+  gritter (~> 1.2)
   hirb
   jbuilder (~> 2.5)
   jquery-rails

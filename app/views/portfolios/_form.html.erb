@@ -1,4 +1,10 @@
 <%= form_with(model: portfolio_item, local: true) do |form| %>
+    <% byebug %>
+  <% if portfolio_item.errors.any? %>
+      <% portfolio_item.errors.full_messages.each do |error| %>
+          <%= js add_gritter(error, title: 'DD Serhat Portfolio', sticky: false) %>
+      <% end %>
+  <% end %>
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
