@@ -11,17 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :blog_title %>
+  <div class="form-group">
+    <%= form.text_field :title, id: :blog_title, class: 'form-control', placeholder: 'Title' %>
   </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body, id: :blog_body %>
+  <div class="form-group">
+    <%= form.text_area :body, id: :blog_body, class: 'form-control', placeholder: 'Content' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
