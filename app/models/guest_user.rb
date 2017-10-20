@@ -1,3 +1,3 @@
 class GuestUser < User
-  attr_accessor :name, :email
+  attr_accessor :name, :email, :id
 end
