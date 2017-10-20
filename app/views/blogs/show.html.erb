@@ -1,14 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="col-sm-8 blog-main">
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
+  <h2><%= @blog.title %></h2>
 
-<p>
-  <strong>Body:</strong>
-  <%= @blog.body %>
-</p>
+  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:admin) %>
 
-<%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:admin) %>
-<%= link_to 'Back', blogs_path %>
+  <p>
+    <%= @blog.body %>
+  </p>
+
+  <% unless current_user.is_a?(GuestUser) %>
+    <%= render 'comments/comment_form', comment: @comment %>
+  <% end %>
+
+  <div id="comments" data-blog-id="<%= @blog.id %>">
+    <%= render @blog.comments %>
+  </div>
+
+</div>
