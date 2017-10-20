@@ -4,6 +4,9 @@
       <%= alert_generator(error) %>
     <% end %>
   <% end %>
+  <div class="form-group">
+    <%= form.select :topic_id, options_for_select(@topics_array), class: 'form-control' %>
+  </div>
 
   <div class="form-group">
     <%= form.text_field :title, id: :blog_title, class: 'form-control', placeholder: 'Title' %>
@@ -12,6 +15,8 @@
   <div class="form-group">
     <%= form.text_area :body, id: :blog_body, class: 'form-control', placeholder: 'Content' %>
   </div>
+
+  <input type="hidden" name="blog[user_id]" value="<%= current_user.id %>">
 
   <div class="form-group">
     <%= form.submit class: 'btn btn-primary' %>
