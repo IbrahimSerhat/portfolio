@@ -7,7 +7,7 @@
   <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:admin) %>
 
   <p>
-    <%= @blog.body %>
+    <%= markdown @blog.body %>
   </p>
 
   <% unless current_user.is_a?(GuestUser) %>
