@@ -29,7 +29,6 @@ class BlogsController < ApplicationController
   # GET /blogs/new
   def new
     @blog = Blog.new
-    @topics_array = Topic.all.map { |topic| [topic.title, topic.id] }
   end
 
   # GET /blogs/1/edit
@@ -40,7 +39,6 @@ class BlogsController < ApplicationController
   # POST /blogs.json
   def create
     @blog = Blog.new(blog_params)
-    @topics_array = Topic.all.map { |topic| [topic.title, topic.id] }
 
     respond_to do |format|
       if @blog.save
