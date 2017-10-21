@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :sidebar_topics
   layout 'blog'
   access user: [:index, :show], admin: :all
 
@@ -95,5 +96,9 @@ class BlogsController < ApplicationController
 
   def all_blogs
     @blogs = Blog.recent.page(params[:page]).per(5)
+  end
+
+  def sidebar_topics
+    @sidebar_topics = Topic.with_blogs
   end
 end
