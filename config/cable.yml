@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV['REDIS_URL'] %>
+  url: <%= ENV['REDISCLOUD_URL'] %>
   channel_prefix: portfolio_production
