@@ -6,12 +6,32 @@
   <% end %>
 
   <div class="form-group">
+    <%= form.radio_button(:status, 'draft') %>
+    <%= form.label(:status, 'Draf') %>
+    <%= form.radio_button(:status, 'published') %>
+    <%= form.label(:status, 'Published') %>
+  </div>
+
+  <div class="form-group">
+    <%= form.collection_select(:topic_id, Topic.all, :id, :title,
+                               {
+                                   selected: blog.topic.id,
+                                   include_blank: true
+                               },
+                               class: 'form-control'
+                               )
+    %>
+  </div>
+
+  <div class="form-group">
     <%= form.text_field :title, id: :blog_title, class: 'form-control', placeholder: 'Title' %>
   </div>
 
   <div class="form-group">
     <%= form.text_area :body, id: :blog_body, class: 'form-control', placeholder: 'Content' %>
   </div>
+
+  <input type="hidden" name="blog[user_id]" value="<%= current_user.id %>">
 
   <div class="form-group">
     <%= form.submit class: 'btn btn-primary' %>

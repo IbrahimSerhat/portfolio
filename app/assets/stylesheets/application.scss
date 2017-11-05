@@ -1,6 +1,16 @@
 @import 'bootstrap';
 @import 'gritter';
 
+@font-face {
+  font-family: 'Roboto Slab';
+  font-src:font_url('RobotoSlab-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-src:font_url('Lato-Regular.ttf');
+}
+
 /*
  * Globals
  */
@@ -33,9 +43,19 @@ body {
   #background-color: #333;
 }
 body {
+  font-family: Lato, sans-serif;
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Roboto Slab', serif;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -220,4 +240,36 @@ body {
 
 .tech-news > .card{
   padding: 30px;
+}
+
+.app-card-container{
+  color: black;
+  text-align: justify;
+}
+
+.app-card-container a{
+  color: blue;
+}
+
+.app-card-container > .card{
+  padding: 20px;
+}
+
+
+.profile-img {
+  border: 1px solid grey;
+}
+
+#jobHistory > .card-block{
+  padding:10px 5px 10px 5px;
+  margin:5px 0 5px 0;
+}
+
+#education > .card-block{
+  padding:10px 5px 10px 5px;
+  margin:5px 0 5px 0;
+}
+
+.skill{
+  margin-top: 10px;
 }

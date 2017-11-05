@@ -9,6 +9,8 @@
       </div>
     </div>
     <% end %>
+
+    <%= source_helper('alert alert-warning') %>
     <div class="row <%= 'sortable' if logged_in?(:admin) %>">
       <%= render partial: 'portfolio_item', collection: @portfolio_items %>
     </div>

@@ -9,4 +9,8 @@ class Blog < ApplicationRecord
   belongs_to :topic
   belongs_to :user
   has_many :comments, dependent: :destroy
+
+  def self.recent
+    order('created_at DESC')
+  end
 end
