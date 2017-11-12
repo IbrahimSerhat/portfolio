@@ -49,6 +49,6 @@ gem 'kaminari', git: 'https://github.com/kaminari/kaminari'
 gem 'mini_magick'
 gem 'petergate', '~> 1.7', '>= 1.7.5'
 gem 'redcarpet'
-gem 'redis', '~> 4.0', '>= 4.0.1'
+gem 'redis', '~> 3.3', '>= 3.3.5'
 gem 'twitter', '~> 6.1'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
